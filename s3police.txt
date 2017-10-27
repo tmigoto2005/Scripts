@@ -1,0 +1,31 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [{
+			"Effect": "Allow",
+			"Action": [
+				"s3:ListBucket",
+				"s3:GetBucketLocation"
+			],
+			"Resource": [
+				"arn:aws:s3:::call_logs/*",
+				"arn:aws:s3:::oeh-file-server-backup/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObjectMetaData",
+				"s3:GetObject",
+				"s3:PutObject",
+				"s3:ListMultipartUploadParts",
+				"s3:AbortMultipartUpload",
+				"s3:PutObject",
+				"s3:ListObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::call_logs/*",
+				"arn:aws:s3:::oeh-file-server-backup/*"
+			]
+		}
+	]
+}
